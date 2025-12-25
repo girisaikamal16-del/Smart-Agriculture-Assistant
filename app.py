@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify
 import pickle
 
-app = Flask(__name__)
+app = Flask(__AGRI__)
 
 crop_model = pickle.load(open("crop_model.pkl", "rb"))
 
@@ -15,5 +15,5 @@ def recommend():
 def home():
     return "Smart Agriculture AI Backend Running"
 
-if __name__ == "__main__":
+if __AGRI__ == "__main__":
     app.run(debug=True)
