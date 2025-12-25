@@ -1,31 +1,54 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>Smart Agriculture Assistant</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h1>🌾 Smart Agriculture Assistant</h1>
+  <div class="overlay">
+    <div class="container">
+      
+      <h1>🌾 Smart Agriculture Assistant</h1>
+      <p class="subtitle">AI-powered support for modern farmers</p>
 
-<h2>Crop Disease Detection</h2>
-<input type="file" id="imageInput">
-<button onclick="detectDisease()">Detect Disease</button>
-<p id="diseaseResult"></p>
+      <!-- Crop Disease Detection -->
+      <div class="card">
+        <h2>🦠 Crop Disease Detection</h2>
+        <input type="file" id="imageInput">
+        <button onclick="detectDisease()">Detect Disease</button>
+        <p id="diseaseResult" class="result"></p>
+      </div>
 
-<h2>Crop Recommendation</h2>
-<input id="n" placeholder="Nitrogen">
-<input id="p" placeholder="Phosphorus">
-<input id="k" placeholder="Potassium">
-<input id="ph" placeholder="pH">
-<button onclick="recommendCrop()">Recommend Crop</button>
-<p id="cropResult"></p>
+      <!-- Crop Recommendation -->
+      <div class="card">
+        <h2>🌱 Crop Recommendation</h2>
+        <div class="input-grid">
+          <input id="n" placeholder="Nitrogen (N)">
+          <input id="p" placeholder="Phosphorus (P)">
+          <input id="k" placeholder="Potassium (K)">
+          <input id="ph" placeholder="Soil pH">
+        </div>
+        <button onclick="recommendCrop()">Recommend Crop</button>
+        <p id="cropResult" class="result"></p>
+      </div>
 
-<h2>Farmer Chatbot</h2>
-<input id="question" placeholder="Ask your question">
-<button onclick="askBot()">Ask</button>
-<p id="botAnswer"></p>
+      <!-- Chatbot -->
+      <div class="card">
+        <h2>🤖 Farmer Chatbot</h2>
+        <input id="question" placeholder="Ask your farming question...">
+        <button onclick="askBot()">Ask</button>
+        <p id="botAnswer" class="result"></p>
+      </div>
 
-<script src="script.js"></script>
+      <footer>
+        <p>Academic Mini Project | AIML</p>
+      </footer>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
