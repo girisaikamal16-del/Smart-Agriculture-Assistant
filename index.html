@@ -1,54 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Smart Agriculture Assistant</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Agriculture Assistant</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="overlay">
+        <header>
+            <h1>🌾 Smart Agriculture Assistant</h1>
+            <p>AI-powered support for modern farmers</p>
+        </header>
 
-  <div class="overlay">
-    <div class="container">
-      
-      <h1>🌾 Smart Agriculture Assistant</h1>
-      <p class="subtitle">AI-powered support for modern farmers</p>
+        <main class="container">
+            <section class="glass-card">
+                <h3><span class="icon">🦠</span> Crop Disease Detection</h3>
+                <div class="input-group">
+                    <input type="file" id="fileInput">
+                </div>
+                <button class="btn">Detect Disease</button>
+                <p class="result-text">Disease result will be shown here.</p>
+            </section>
 
-      <!-- Crop Disease Detection -->
-      <div class="card">
-        <h2>🦠 Crop Disease Detection</h2>
-        <input type="file" id="imageInput">
-        <button onclick="detectDisease()">Detect Disease</button>
-        <p id="diseaseResult" class="result"></p>
-      </div>
+            <section class="glass-card">
+                <h3><span class="icon">🍃</span> Crop Recommendation</h3>
+                <div class="grid-inputs">
+                    <input type="number" placeholder="Nitrogen (N)">
+                    <input type="number" placeholder="Phosphorus (P)">
+                    <input type="number" placeholder="Potassium (K)">
+                    <input type="number" placeholder="Soil pH">
+                </div>
+                <button class="btn">Recommend Crop</button>
+                <p class="result-text">Recommended crop will appear here.</p>
+            </section>
 
-      <!-- Crop Recommendation -->
-      <div class="card">
-        <h2>🌱 Crop Recommendation</h2>
-        <div class="input-grid">
-          <input id="n" placeholder="Nitrogen (N)">
-          <input id="p" placeholder="Phosphorus (P)">
-          <input id="k" placeholder="Potassium (K)">
-          <input id="ph" placeholder="Soil pH">
-        </div>
-        <button onclick="recommendCrop()">Recommend Crop</button>
-        <p id="cropResult" class="result"></p>
-      </div>
+            <section class="glass-card">
+                <h3><span class="icon">🤖</span> Farmer Chatbot</h3>
+                <div class="chat-input-row">
+                    <input type="text" placeholder="Ask your farmer question...">
+                    <button class="btn small-btn">Ask</button>
+                </div>
+                <p class="result-text">Bot's answer will be displayed here.</p>
+            </section>
+        </main>
 
-      <!-- Chatbot -->
-      <div class="card">
-        <h2>🤖 Farmer Chatbot</h2>
-        <input id="question" placeholder="Ask your farming question...">
-        <button onclick="askBot()">Ask</button>
-        <p id="botAnswer" class="result"></p>
-      </div>
-
-      <footer>
-        <p>Academic Mini Project | AIML</p>
-      </footer>
-
+        <footer>
+            Academic Mini Project | AIML
+        </footer>
     </div>
-  </div>
-
-  <script src="script.js"></script>
 </body>
 </html>
