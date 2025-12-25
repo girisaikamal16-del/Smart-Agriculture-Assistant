@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Smart Agriculture Assistant</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>🌾 Smart Agriculture Assistant</h1>
+
+<h2>Crop Disease Detection</h2>
+<input type="file" id="imageInput">
+<button onclick="detectDisease()">Detect Disease</button>
+<p id="diseaseResult"></p>
+
+<h2>Crop Recommendation</h2>
+<input id="n" placeholder="Nitrogen">
+<input id="p" placeholder="Phosphorus">
+<input id="k" placeholder="Potassium">
+<input id="ph" placeholder="pH">
+<button onclick="recommendCrop()">Recommend Crop</button>
+<p id="cropResult"></p>
+
+<h2>Farmer Chatbot</h2>
+<input id="question" placeholder="Ask your question">
+<button onclick="askBot()">Ask</button>
+<p id="botAnswer"></p>
+
+<script src="script.js"></script>
+</body>
+</html>
